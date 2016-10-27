@@ -1,0 +1,30 @@
+{
+  "name": "bad-store",
+  "version": "1.0.1",
+  "main": "./lib/file-store.js",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "mocha",
+    "watch": "mocha -w",
+    "start": "node server.js"
+  },
+  "author": "Marty Nelson",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/martypdx/bad-store"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "mocha": "^3.1.2",
+    "rimraf": "^2.5.4"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "description": ""
+}
