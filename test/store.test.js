@@ -87,4 +87,17 @@ describe('file store', () => {
             .catch(done);
     });
 
+    it('deletes items', done => {
+        store.remove(felix.name)
+            .then(deleted => {
+                assert.isOk(deleted);
+                return store.all();
+            })
+            .then(cats => {
+                assert.equal(cats.length, 2);
+                done();
+            })
+            .catch(done);
+    });
+
 });
