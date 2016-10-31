@@ -1,6 +1,6 @@
 const rimraf = require('rimraf');
 const assert = require('chai').assert;
-const fileStore = require('../lib/file-store');
+const store = require('../lib/file-store');
 
 describe('file store', () => {
 
@@ -10,9 +10,8 @@ describe('file store', () => {
     before(removeDir);
     after(removeDir);
     
-    let store = null;
     before(() => {
-        store = fileStore(testDir);
+        store.config(testDir);
     });
 
     const felix = {
